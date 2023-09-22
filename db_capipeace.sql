@@ -4,7 +4,7 @@ CREATE TABLE [tb_postagem] (
 	status varchar NOT NULL,
 	data date NOT NULL,
 	texto varchar NOT NULL,
-	arquivo varchar NOT NULL,
+	link varchar NOT NULL,
 	tema_id bigint NOT NULL,
 	usuario_id bigint NOT NULL,
   CONSTRAINT [PK_TB_POSTAGEM] PRIMARY KEY CLUSTERED
@@ -16,7 +16,7 @@ CREATE TABLE [tb_postagem] (
 GO
 CREATE TABLE [tb_tema] (
 	id bigint NOT NULL,
-	categoria varchar(255) NOT NULL,
+	nome varchar(255) NOT NULL,
 	descricao varchar(510) NOT NULL,
   CONSTRAINT [PK_TB_TEMA] PRIMARY KEY CLUSTERED
   (
@@ -30,7 +30,7 @@ CREATE TABLE [tb_usuario] (
 	nome varchar(255) NOT NULL,
 	usuario varchar(255) NOT NULL,
 	senha varchar(255) NOT NULL,
-	tipoUser varchar(255) NOT NULL,
+	tipo varchar(255) NOT NULL,
 	foto varchar(510) NOT NULL,
   CONSTRAINT [PK_TB_USUARIO] PRIMARY KEY CLUSTERED
   (
